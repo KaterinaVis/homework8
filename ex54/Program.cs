@@ -45,21 +45,29 @@ matr[i, j] = rand.Next(1, 10);
 
 void SortArray(int[,] matr)
 {
+    int [] sort = new int[n];
+    int index = 0;
 for (int i = 0; i<matr.GetLength(0); i++)
  {
    for (int j = 0; j<matr.GetLength(1); j++)
    {
     if (matr [i,j]> matr [i+1,j])
     {
-        int temp = matr [i,j];
-        matr [i,j] = matr [i+1,j];
-        matr [i+1,j] = temp;
+        
+        sort [index] = matr [i,j];
+        index++;
+
     }
     else
     {
-        i++;
+        index++;
     }
 
    }
+ }
+ for (int i = 0; i<sort.Length;i++)
+ {
+    Console.WriteLine(sort);
+    
  }
 }
