@@ -18,7 +18,10 @@ Console.WriteLine();
 int[,] matrix = new int [m,n];
 FillRndArray(matrix);
 PrintArray (matrix);
+Console.WriteLine();
 SortArray(matrix);
+PrintArray (matrix);
+
 
 void PrintArray (int[,] matr)
 {
@@ -45,29 +48,21 @@ matr[i, j] = rand.Next(1, 10);
 
 void SortArray(int[,] matr)
 {
-    int [] sort = new int[n];
-    int index = 0;
 for (int i = 0; i<matr.GetLength(0); i++)
  {
    for (int j = 0; j<matr.GetLength(1); j++)
    {
-    if (matr [i,j]> matr [i+1,j])
-    {
-        
-        sort [index] = matr [i,j];
-        index++;
-
-    }
-    else
-    {
-        index++;
-    }
-
+    for (int a = 0; a < matr.GetLength(1) - 1; a++)
+      {
+        if (matr[i, a] > matr[i, a + 1])
+        {
+          int temp = matr[i, a + 1];
+          matr[i, a + 1] = matr[i, a];
+          matr[i, a] = temp;
+        }
+      }
    }
  }
- for (int i = 0; i<sort.Length;i++)
- {
-    Console.WriteLine(sort);
-    
- }
 }
+
+
