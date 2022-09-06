@@ -19,7 +19,7 @@ int[,,] matrix = new int [x,y,z];
 FillRndArray(matrix);
 PrintArray (matrix);
 
-
+-------------------------
 
 void PrintArray (int[,,] array)
 {
