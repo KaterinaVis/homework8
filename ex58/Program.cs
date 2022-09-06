@@ -63,7 +63,7 @@ matr[i, j] = rand.Next(1, 10);
 }
 }
 
-void MultipArray(int[,] matrA, int[,] matrB, int[,] matrC)
+void MultipArray(int[,] matrA, int[,] matrB, int[,] matrC) //произведение двух массивов в третий
 {
 for (int i = 0; i < matrC.GetLength(0); i++)
 {
